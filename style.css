@@ -297,34 +297,6 @@ footer{
 }
 
 
-img{
-    float:left
-      }
-
-      dd {
-         list-style-type: none; /* Remove default list styling */
-         position: relative;
-         margin-left: 1%; /* Space for the circle */
-         padding-left: 15px; /* Space for the circle */
-         line-height: 1.6; /* Adjust line height for readability */
-     }
-     
-     /* Create the black circle */
-     dd::before {
-         content: "";
-         position: absolute;
-         left: 0;
-         top: 50%;
-         transform: translateY(-50%);
-         width: 8px;
-         height: 8px;
-         background-color: black;
-         border-radius: 50%;
-     }
-
-     .add-space{
-         margin-left: 50%;
-     }
 
 /*home page header*/
 .header {
@@ -483,3 +455,28 @@ h2{
     font-weight: bold; /* Bold text */
     line-height: 1.4; /* Line height for text */
 } 
+
+
+  /*--Gallery--*/
+img{
+    float:left
+      }
+
+      .des {
+       
+         position: relative;
+         margin-left: 1%; /* Space for the circle */
+         padding-left: 15px; /* Space for the circle */
+         line-height: 1.6; /* Adjust line height for readability */
+     }
+     
+     /* Create the black circle */
+     dd::before {
+         content: "\25CF";  /*unique code for circle black*/
+         color:black;
+         margin-right: 20px; /*add space between the circle and text*/
+     }
+
+     .add-space{
+         margin-left: 50%;
+     }
