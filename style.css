@@ -164,8 +164,8 @@ h2{
 
 .team-row img {
    width: 200px; /* Set a fixed width for consistency */
-   height: 100px; /* Maintain aspect ratio */
-   border-radius: 1000px; /* Make images circular */
+   height: 180px; /* Maintain aspect ratio */
+   border-radius: 100px; /* Make images circular */
    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow */
    transition: transform 0.3s ease;  
   
