@@ -40,7 +40,6 @@ ul{
     padding: 12px;
     overflow: hidden;
     background-color: white;
-    border-bottom: 1px solid gray;
     list-style-type: none;
 }
 li{
@@ -62,7 +61,7 @@ li a:hover{
     border-radius: 10px;
 }
 #log-out{
-    background-color: #f7f7f7;
+    background-color:#f7f7f7;
     border-radius: 10px;
 }
 #log-out:hover{
@@ -79,6 +78,114 @@ li a:hover{
     padding: 1px;
     size: 90px;
 }
+.containerAbout1{
+ 
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+    width: 85%;
+    left: 7.5%;
+    position: relative;
+    background-color:white;
+    gap:50px;
+}
+/*
+img{
+    float:right;
+    width:75%;
+    height: 350px;
+    margin-right: 20px;
+  }*/
+
+  .text h1{
+    font-size: 36px;
+  }
+  
+  .boxAbout1 {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+   
+}
+
+.box {
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+   
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+  
+}
+
+
+.box h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: left; /* Aligns the heading to the left */
+}
+
+.box p {
+    font-size: 1em;
+    color: #666;
+    text-align: left; 
+}
+h2{
+    text-align: center;
+}
+.team-row {
+    display: flex; 
+   justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically, in case of height differences */
+    gap: 50px; 
+}
+
+.team-row.centered {
+    display: flex; /* Ensures flex properties apply */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically, in case of height differences */
+    gap: 50px; 
+}
+
+
+.team-row figure {
+    text-align: center; /* Center-align text within figures */
+    margin: 10px; /* Space around each figure */
+}
+
+.team-row img {
+   width: 200px; /* Set a fixed width for consistency */
+   height: 100px; /* Maintain aspect ratio */
+   border-radius: 1000px; /* Make images circular */
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow */
+   transition: transform 0.3s ease;  
+  
+}
+
+.team-row img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+
+.team-row figcaption {
+    margin-top: 10px; /* Space between image and text */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text */
+    line-height: 1.4; /* Line height for text */
+} 
+
+
+
 /*--Services page--*/
 .services-training{
     margin-top: 50px;
@@ -250,6 +357,25 @@ form{
     align-self: center;
 }
 
+/*--Reset password--*/
+.reset-button{
+    margin-top: 30px;
+    align-self: center;
+}
+#cancel{
+    color: black;
+    background-color: aliceblue;
+    padding: 6px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+#reset{
+    color: white;
+    background-color: #040316;
+    padding: 6px;
+    border-radius: 8px;    
+}
+
 /*--Dashboard--*/
 .dashboard{
     border: 1px solid #D9D9D9;
@@ -296,8 +422,6 @@ footer{
     border: none;
 }
 
-
-
 /*home page header*/
 .header {
     position: relative;
@@ -333,6 +457,7 @@ footer{
 .btn:hover {
     background-color:darkkhaki;
 }
+
 /*home page image*/
 .right-image{
     float: right;
@@ -352,57 +477,124 @@ footer{
     background-color:white;
 }
 
-.containerAbout1{
- 
-    display: flex;
-    align-items: left;
-    justify-content: space-between;
-    padding: 20px;
-    margin-top: 20px;
-    width: 85%;
-    left: 7.5%;
-    position: relative;
-    background-color:white;
-}
-/*
-img{
-    float:right;
-    width:75%;
-    height: 350px;
-    margin-right: 20px;
-  }*/
-
-  .text h1{
-    font-size: 36px;
-  }
-  
-  .boxAbout1 {
-    display: flex;
-    justify-content: space-around;
+/*dashbord*/
+.dash-container {
+    max-width: 800px;
     margin: 20px auto;
-    width: 90%;
-    max-width: 1200px;
-}
-
-.box {
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
     padding: 20px;
+    background-color:ghostwhite;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D9D9D9;
 }
 
-.box img {
-    width: 100%;
-    height: auto;
+/*  ACOUNT Form styling */
+
+
+  #account-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap:5px;
+    align-items:center; 
+    
+  }
+
+  /* Style for each form group */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  /* Style for labels */
+  .form-group label {
+    margin-bottom: 2px; 
+
+  }
+
+  /* Style for input fields and textarea */
+  .form-group input,
+  .form-group textarea {
+    width: 65%; 
+    gap:5px;
+    height: 30px; 
+    box-sizing: 8px;
+    border: 3px 8px solid #D9D9D9;
+    
+  }
+
+  /* Style for textarea */
+  .form-group textarea {
+    height: 80px; 
+  }
+  .form-group button {
+    width: 40%;
+    background-color:black;
+    color: white; 
+    border: none; 
     border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px; 
+    font-size: 16px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+.form-group button:hover {
+    background-color:green; }
+.form-group-btn button {
+    width: 40%;
+    background-color:white; 
+    color:black; 
+    border: none; 
+    border-radius: 5px; 
+    padding:5px 10px; 
+    margin: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+.form-group-btn button:hover {
+    background-color:green; }
+
+.form-group button:focus {
+    outline: none; 
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); 
+
+}
+  .uploaded-documents {
+    grid-column: span 2; 
+    margin-top: 20px; 
+    width:10%;
+  }
+
+/* Error messages styling */
+.errors {
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+.uploaded-documents {
+    margin-top: 20px;
 }
 
+.uploaded-documents h5 {
+    margin-bottom: 10px;
+}
 
-.box h3 {
-    margin-top: 10px;
-    font-size: 1.5em;
-    color: #333;
-    text-align: left; /* Aligns the heading to the left */
+.uploaded-documents ol {
+    list-style:circle;
+
+}
+
+.uploaded-documents li {
+    background-color:red;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    width: 10%;
+}
+
+span{
+    color: #ff0000;
 }
 
 .box p {
@@ -410,43 +602,46 @@ img{
     color: #666;
     text-align: left; 
 }
-h2{
-    text-align: center;
+
+.container-contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color:transparent;
+    max-width: 1000px;
+    margin: 20px auto;
+    height: 740px;
+ 
 }
-
-.team-row {
-    display: flex; 
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically, in case of height differences */
-    gap: 50px; 
+.box-1 {
+    background:lightgreen;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 48%;
+ 
+ 
+ 
 }
-
-
-.team-row.centered {
-    display: flex; /* Ensures flex properties apply */
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically, in case of height differences */
-    gap: 50px; 
+.box-2{
+    background:#D9D9D9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 48%;
+   
+   
+ 
 }
-
-
-.team-row figure {
-    text-align: center; /* Center-align text within figures */
-    margin: 10px; /* Space around each figure */
+ 
+.box-1 h3, .box-2 h3 {
+    margin-bottom: 10px;
+   margin-left: 25%;
 }
-
-.team-row img {
-    width: 150px; /* Set a fixed width for consistency */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 30%; /* Make images circular */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow */
-    transition: transform 0.3s ease; /* Add smooth scaling transition */
+.box-1 p, .box-2 p{
+color: blue;
+margin-left: 25%;
 }
-
-.team-row img:hover {
-    transform: scale(1.05); /* Slightly enlarge image on hover */
-}
-
 
 .team-row figcaption {
     margin-top: 10px; /* Space between image and text */
@@ -480,3 +675,88 @@ img{
      .add-space{
          margin-left: 50%;
      }
+
+.contact-info {
+    font-size: 16px;
+}
+ 
+.contact-info div {
+    margin-bottom: 10px;
+}
+ 
+.contact-info i {
+    margin-right: 10px;
+}
+.contact-item1 .contact-item2, .contact-item3, .contact-item4, .contact-item5 {
+    display: flex;
+    align-items:center;
+}
+.contact-item1 i
+{
+    color:burlywood;
+    text-decoration: none;
+}
+.contact-item2 i
+{
+    color:blue;
+    text-decoration: none;
+}
+ 
+.contact-item3 i
+{
+    color:red;
+    text-decoration: none;
+}
+ 
+.contact-item4 i
+{
+    color:purple;
+    text-decoration: none;
+} .contact-item5 i {
+    color: blue;
+    text-decoration: none;
+}
+ 
+.contact-item4 a:hover, .contact-item5 a:hover {
+    text-decoration: underline;
+}
+ 
+/* Form */
+.contact label {
+    display:flex;
+    margin-bottom: 5px;
+    font-weight: bold;
+    align-self: center;
+    margin-right: 45%;
+}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    align-self:center;
+    margin-right: 200px;
+}
+ 
+.contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+ 
+.contact button {
+    background:#00D900;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+}
+.contact button:hover {
+    background: #575757;
+}
+ 

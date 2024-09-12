@@ -1,28 +1,103 @@
 <!DOCTYPE html>
 <head>
-    <title></title>
+    <title>Get in touch with us</title>
     <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
     <body>
         <nav>
             <div class="nav-bar">
                 <ul>
                     <img src="images/Logo/Logo.png" id="logo" alt="logo">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li style="float: right;" id="sign-up"><a href="#">Sign up</a></li>
-                    <li style="float: right;"><a href="#">Login</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li style="float: right;" id="sign-up"><a href="sign-up.html">Sign up</a></li>
+                    <li style="float: right;"><a href="login.html">Login</a></li>
                 </ul>
             </div>
         </nav>
         <section class="heading">
             <h5>Contact</h5>
         </section>
+
+        <section>
+            <div class="container-contact">    
+                    <div class="box-1">
+                        <h3>Contact Us</h3>
+        <p>We're here to help you</p>
+        <div class="contact-info">
+            <div class="contact-item1">
+                <i class="fa-solid fa-envelope"></i>
+               Email:Capesunnyenergy@gmail.com
+            </div><br>
+            <div class="contact-item2">
+                <i class="fas fa-phone"></i>
+               Call:+27 82 451 0687
+            </div><br>
+            <div class="contact-item3">
+                <i class="fas fa-map-marker-alt"></i>
+                Location:Cape Town,Western Cape,South Africa
+            </div><br>
+            <div class="contact-item4">
+                <i class="fab fa-instagram"></i>
+                Instagram: @Cape Sunny Energy
+            </div><br>
+            <div class="contact-item5">
+                <i class="fab fa-facebook-f"></i>
+              Facebook:Cape Sunny Energy
+            </div>
+        </div>
+    </div>
+                    
+
+
+                    <div class="box-2"><h3>Let's Talk</h3>
+                    <p>Feel free to drop us a line below</p>
+                
+                    
+                     <form class="contact">
+                        
+                       <label>Name:</label>
+                       <input type="text" name="name" required><br>
+                       <label>Last Name:</label>
+                       <input type="text" name="name"required><br>
+                       <label>Email:</label>
+                       <input type="email" name="email"required><br>
+                       <label>Message:</label>
+                       <textarea type="textarea" id="message" name="message" placeholder="Enter your message:" required></textarea><br>
+                       <button type="submit" class="input-box">Submit</button>
+
+                     </form>
+
+                     </section>
+
+
     </body>
     <footer>
-        
+        <div class="footer-banner">
+            <img src="images/Logo/Logo.png" id="logo" alt="logo">
+        </div>
+        <div class="footer-links">
+            <p>CSE</p>
+                <a href="about.html">Company:</a>
+                <a href="contact.html">Get in touch:</a>
+                <a href="sign-up.html">Sign up:</a>
+        </div>
+        <div class="newsletter">
+            <p>Let's connect:</p>
+            <p><i>Subscribe to our newsletter</i></p>
+            <input type="email" placeholder="Enter your email" name="email">
+            <button>Submit</button>
+        </div>
+        <div>
+            <p>Operating hours:</p>
+            <p>Monday - Friday: 08:00 - 16:30.</p>
+            <p>Saturdays: 08:30 - 12:30.</p>
+            <p>Sundays & Public Holidays: Closed.</p>
+        </div>
     </footer>
 </html>
