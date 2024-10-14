@@ -185,6 +185,23 @@ h2{
     line-height: 1.4; /* Line height for text */
 } 
 
+#approach-link, #mission-link, #vision-link {
+    padding: 10px;
+    font-weight: bold; /* Text is bold by default */
+    border-radius: 5px;
+    background-color: #e0e0e0; /* Add background color before hover */
+   /* transition: all 0.3s ease;*/
+    text-decoration: none;
+    color: #000; /* Default text color */
+}
+
+#approach-link:hover, #mission-link:hover, #vision-link:hover {
+    background-color: #f0f0f0; /* Background color on hover */
+    border-radius: 5px; /* Adjust the radius on hover */
+    color: #000; /* Text color on hover */
+}
+
+
 
 
 /*--Services page--*/

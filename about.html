@@ -9,12 +9,18 @@
 
     if (content.style.display === "none") {
         content.style.display = "inline";
-        link.textContent = "Read less";
+        link.textContent = "See less";
     } else {
         content.style.display = "none";
-        link.textContent = "Read more";
+        link.textContent = "See more";
     }
 }
+
+
+  
+
+
+
 
     </script>
 </head>
@@ -64,10 +70,10 @@
                 <p> We envision a future where every home, business, and community harnesses the power of renewable energy.</p>
                 <p id="vision" style="display: none;">
                     By promoting solar solutions, we aim to minimize pollution, reduce energy costs, and make a positive impact on the environment. At CSE, we are committed to driving change by employing skilled individuals, offering affordable energy solutions, and fostering sustainable practices.
-                </p>
-                <a href="javascript:void(0)" id="vision-link" onclick="toggleContent('vision')">Read more</a>
+                    </p>
+                    <a href="javascript:void(0)" id="vision-link" onclick="toggleContent('vision')">See more</a>
             </div>
-        
+           
             <!-- Mission Section -->
             <div class="box box2">
                 <h3>Our Mission</h3>
@@ -81,8 +87,10 @@
                 <!-- Hidden part of the paragraph -->
                 <p id="mission" style="display: none;">
                     We are passionate about creating job opportunities, providing high-quality training for local installers, and making a significant contribution to the fight against climate change.
-                </p>
-                <a href="javascript:void(0)" id="mission-link" onclick="toggleContent('mission')">Read more</a>
+                    
+                </p><br>
+                <a href="javascript:void(0)" id="mission-link" onclick="toggleContent('mission')">See more</a>
+                
             </div>
         
             <!-- Approach Section -->
@@ -94,7 +102,7 @@
                     We take pride in our community-centric approach. By engaging in workshops and educational programs. </p>
                    
                 <p  id="approach" style="display: none;"> We forge deeper connections with the local population. Our focus on affordability ensures that solar energy is accessible to everyone, while our emphasis on eco-friendly practices positions us as leaders in promoting sustainable energy.</p>
-                <a href="javascript:void(0)" id="approach-link" onclick="toggleContent('approach')">Read more</a>
+                <br><br><a href="javascript:void(0)" id="approach-link" onclick="toggleContent('approach')">See more</a>
             </div>
         </div>
         
@@ -103,18 +111,18 @@
         <div class="team-row">
             <figure>
             <img src="images/About/thina.jpg" alt="Team Member 1">
-            <figcaption>Thina Nontwabaza<br>Founder</figcaption></figure>
+            <figcaption>Thina Nontwabaza<br>CEO</figcaption></figure>
 
             <figure><img src="images/About/sisipho.jpg" alt="Team Member 2" >
-                <figcaption>Sisipho Kanana<br>Operations Manager </figcaption></figure>
+                <figcaption>Sisipho Kanana<br>CFO </figcaption></figure>
                 <figure><img src="images/About/sisanda.jpg" alt="Team Member 3">
-                    <figcaption>Sisanda Mavuso<br>Marketing Manager</figcaption></figure>
+                    <figcaption>Sisanda Mavuso<br>COO</figcaption></figure>
         </div>
         
 
         <div class="team-row centered">
-          <figure>  <img src="images/About/sine.jpg" alt="Team Member 4"> <figcaption>Sinentlahla Pindani<br>Sales Manager</figcaption></figure><br>
-          <figure><img src="images/About/asiphe.jpg" alt="Team Member 5"><figcaption>Asiphe Qampi<br> Recruiter Agent </figcaption></figure>
+          <figure>  <img src="images/About/sine.jpg" alt="Team Member 4"> <figcaption>Sinentlahla Pindani<br>QA Manager</figcaption></figure><br>
+          <figure><img src="images/About/asiphe.jpg" alt="Team Member 5"><figcaption>Asiphe Qampi<br> Operating Manager </figcaption></figure>
         </div><br><br>
 
 
@@ -136,8 +144,10 @@
     <div class="newsletter">
         <p>Let's connect:</p>
         <p><i>Subscribe to our newsletter</i></p>
-        <input type="email" placeholder="Enter your email" name="email">
-        <button>Submit</button>
+      
+        <input type="email" id="footerEmail" placeholder="Enter your email" name="email">
+        <button id="footerSubmit">Submit</button>
+        
     </div>
     <div>
         <p>Operating hours:</p>
@@ -147,4 +157,31 @@
     </div>
     
 </footer>
+<script>
+const footerEmailInput = document.getElementById('footerEmail');
+    const footerSubmitBtn = document.getElementById('footerSubmit');
+
+    footerSubmitBtn.addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+      
+        const email = footerEmailInput.value;
+
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (email.match(emailPattern)) {
+            
+            alert('Thank you for subscribing!');
+
+            
+            localStorage.setItem('subscribedEmail', email);
+
+           
+            footerEmailInput.value = '';
+        } else {
+           
+            alert('Please enter a valid email address.');
+        }
+    });
+</script>
+
 </html>
